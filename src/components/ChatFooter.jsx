@@ -1,5 +1,26 @@
+import React, { useState } from "react";
+
 export default function ChatFooter () {
+    const [ message, setMessage ] = useState("");
+    
+    const handleSendMessage = (e) => {
+        e.preventDefault();
+        console.log({ userName: localStorage.getItem('userName'), message });
+        setMessage('');
+  
+    }
     return (
-        <div>ChatFooter</div>
+        <div className="chat__footer">
+            <form className="form" onSubmit={handleSendMessage}>
+                <input
+                    type="text"
+                    placeholder="Write message"
+                    className="message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                />
+                <button className="sendBtn">Send</button>
+            </form>
+        </div>
     )
 }

@@ -8,7 +8,7 @@ export default function ChatPage({ socket }) {
             <ChatBar/>
             <section>
                 <ChatBody/>
-                <ChatFooter/>
+                <ChatFooter socket={ socket }/>
             </section>
         </section>
     );

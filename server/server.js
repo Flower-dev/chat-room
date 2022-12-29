@@ -3,9 +3,10 @@ const app = express();
 const PORT = 8080;
 const http = require('http').Server(app);
 const cors = require('cors');
+// à changer avec ws
 const socketIO = require('socket.io')(http, { 
 	cors: {
-	    origin: "http://localhost:3000"
+	  origin: "http://localhost:3000"
 	}
 });
 
