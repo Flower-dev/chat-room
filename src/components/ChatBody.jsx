@@ -21,23 +21,27 @@ export default function ChatBody ({messages, typingStatus, lastMessageRef}) {
             </header>
             {/*This shows messages sent from you*/}
             <div className="message__container">
-                <div className="message__chats">
-                    <p className="sender__name">You</p>
-                    <div className="message__sender">
-                        <p>Hello there</p>
+                {messages.map((msg) => msg.name === localStorage.getItem('userName') ? (
+                    <div className="message__chats" key={msg.id}>
+                        <p className="sender__name">You</p>
+                        <div className="message__sender">
+                            <p>{msg.text}</p>
+                        </div>
+                    </div>    
+                ) : (
+                    <div className="message__chats" key={msg.id}>
+                        <p>{msg.name}</p>
+                        <div className="message__recipient">
+                            <p>{msg.text}</p>
+                        </div>
                     </div>
-                </div>
-                {/*This shows messages received by you*/}
-                <div className="message__chats">
-                    <p>Other</p>
-                    <div className="message__recipient">
-                        <p>Hey, I'm good, you?</p>
-                    </div>
-                </div>
+                ))}
+
                 {/*This is triggered when a user is typing*/}
                 <div className="message__status">
-                    <p>Someone is typing...</p>
+                    <p>{typingStatus}</p>
                 </div>
+                <div ref={lastMessageRef} />
             </div>
         </>
     )

@@ -33,7 +33,7 @@ socketIO.on('connection', (socket) => {
  
     socket.on('disconnect', () => {
       console.log('🔥: A user disconnected');
-      users = users.filter(user => user.socketID !== socket.id)
+      users = users.filter(user => user.socketId !== socket.id)
       socketIO.emit("newUserResponse", users)
       socket.disconnect()
     });

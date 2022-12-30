@@ -8,7 +8,7 @@ const Home = ({ socket }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		localStorage.setItem("userName", userName);
-		socket.emit("newUser", {userName, socketID: socket.id});
+		socket.emit("newUser", {userName, socketId: socket.id});
 		navigate("/chat");
 	};
 
