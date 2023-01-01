@@ -1,7 +1,15 @@
-/* HOME PAGE */
-.home__container {
+/* APP */
+.app__container {
   max-width: 1280px;
   margin: auto;
+}
+
+/* HOME PAGE */
+.home__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .home__header {

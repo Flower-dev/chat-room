@@ -11,10 +11,11 @@ const socket = socketIO.connect("http://localhost:8080");
 
 function App() {
 	return (
-		<BrowserRouter>
-			<Router socket={socket}/>
-		</BrowserRouter>
-		
+		<div className='App__container'>
+			<BrowserRouter>
+				<Router socket={socket}/>
+			</BrowserRouter>
+		</div>
 	);
 }
 
