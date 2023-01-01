@@ -1,8 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react';
 
-import ChatBar from "./ChatBar";
-import ChatBody from "./ChatBody";
-import ChatFooter from "./ChatFooter";
+import ChatBar from "../components/ChatBar";
+import ChatBody from "../components/ChatBody";
+import ChatFooter from "../components/ChatFooter";
 
 export default function ChatPage({ socket }) {
     const [ messages, setMessages ] = useState([]);

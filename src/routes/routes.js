@@ -1,7 +1,7 @@
 import { useRoutes } from 'react-router-dom';
 // views
-import Home from '../components/Home';
-import ChatPage from '../components/ChatPage';
+import Home from '../pages/Home';
+import ChatPage from '../pages/ChatPage';
 
 export default function Router({socket}) {
     return useRoutes([
