@@ -19,25 +19,21 @@ export default function Home({socket}) {
 	return (
 		<section className='home__container'>
 			<h2 className='home__header'>Welcome back! 👋🏻</h2>
-
-			<div>
-				<img src={Img} className='home__img'/>
-				
-				<form onSubmit={handleSubmit} className='home__form'>
-					<h3 className='home__header'>Login</h3>
-					<input 
-						type='text' 
-						minLength={6} 
-						name='username' 
-						placeholder='Username'
-						id='username'
-						className='username__input' 
-						value={userName} 
-						onChange={e => setUserName(e.target.value)}
-					/>
-					<Button className='home__cta'>Sign In</Button>
-				</form>
-			</div>
+			<img src={Img} className='home__img'/>
+			<form onSubmit={handleSubmit} className='home__form'>
+				<h3 className='home__header'>Login</h3>
+				<input 
+					type='text' 
+					minLength={6} 
+					name='username' 
+					placeholder='Username'
+					id='username'
+					className='username__input' 
+					value={userName} 
+					onChange={e => setUserName(e.target.value)}
+				/>
+				<Button className='home__cta'>Sign In</Button>
+			</form>
 		</section>
 	);
 }

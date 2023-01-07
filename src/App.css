@@ -7,11 +7,10 @@
 /* HOME PAGE */
 .home__container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color: #bfbf92;
-  font-family:monospace;
+  background-color: #f7f7f2;
   width:100vw;
   min-height: 100vh;
 }
@@ -20,33 +19,49 @@
   text-align: center;
   letter-spacing: 1.5px;
   text-transform: capitalize;
+  font-family: Roboto;
+}
+
+.home__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .home__img {
-  width: 50%;
+  width: 60%;
+  position: relative;
 }
 
 .home__form {
-  background-color: white;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 650px;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
 
 }
 
-.home__cta {
+.username__input {
+  width: 10%;
   border-radius: 5px;
-  border: none;
-  text-align: center;
-  background-color: #A2A632;
-  text-transform: uppercase;
+  border-color: #A2A632;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 10px;
   padding-top: 10px;
-  font-family:monospace;
+  margin-bottom: 10px;
+}
+
+.home__cta {
+  border-radius: 5px;
+  width: 10%;
+  border: none;
+  text-align: center;
+  background-color: #A2A632;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
