@@ -9,7 +9,7 @@ export default function ChatBar ({ socket }) {
 
     return (
         <section>
-            <h2>Chat 💬</h2>
+            <h2 className="chat__title">Chat 💬</h2>
             <section>
                 <h4 className="chat__header">Active users</h4>
                 <div className="chat__users">
