@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // components
 import Button from "../components/atoms/Button";
-// assets
-import Img from "../assets/home.svg";
+
 
 export default function Home({socket}) {
 	const navigate = useNavigate();
@@ -17,23 +16,24 @@ export default function Home({socket}) {
 	};
 
 	return (
-		<section className='home__container'>
-			<h2 className='home__header'>Welcome back! 👋🏻</h2>
-			<img src={Img} className='home__img'/>
-			<form onSubmit={handleSubmit} className='home__form'>
-				<h3 className='home__header'>Login</h3>
-				<input 
-					type='text' 
-					minLength={6} 
-					name='username' 
-					placeholder='Username'
-					id='username'
-					className='username__input' 
-					value={userName} 
-					onChange={e => setUserName(e.target.value)}
-				/>
-				<Button className='home__cta'>Sign In</Button>
-			</form>
-		</section>
+		<main className="px-14 py-14 flex justify-center justify-items-center">
+			<section className='rounded-xl shadow-2xl px-2 py-2'>
+				<h2 className='uppercase'>Welcome back! 👋🏻</h2>
+				<form onSubmit={handleSubmit} className='flex flex-col gap-3'>
+					<h3 className=''>Login</h3>
+					<input 
+						type='text' 
+						minLength={6} 
+						name='username' 
+						placeholder='Username'
+						id='username'
+						className='border-2 border-lime-700 rounded-lg px-1 py-1' 
+						value={userName} 
+						onChange={e => setUserName(e.target.value)}
+					/>
+					<Button className='bg-lime-700 rounded-lg py-1.5 text-lime-200 uppercase'>Sign In</Button>
+				</form>
+			</section>
+		</main>
 	);
 }
