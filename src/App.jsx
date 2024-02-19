@@ -10,11 +10,9 @@ const socket = socketIO.connect("http://localhost:8080");
 
 function App() {
 	return (
-		<div className='w-screen h-screen'>
-			<BrowserRouter>
-				<Router socket={socket}/>
-			</BrowserRouter>
-		</div>
+		<BrowserRouter>
+			<Router socket={socket}/>
+		</BrowserRouter>
 	);
 }
 
